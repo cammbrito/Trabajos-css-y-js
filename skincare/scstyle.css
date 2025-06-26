@@ -1,0 +1,260 @@
+/* ---- Reset ---- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Staatliches", sans-serif;
+  background-color: #fff9f9;
+  color: #243066;
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  font-family: 'Oswald', sans-serif;
+}
+
+/* ---- Navbar ---- */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: #ffe6f0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 600;
+  color: #db5aa7;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #db5aa7;
+}
+
+/* ---- Hero ---- */
+.hero {
+  background: linear-gradient(to bottom right, #ffe6f0, #e0f7fa);
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 42px;
+  color: #db5aa7;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.btn {
+  background-color: #db5aa7;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #c94f9c;
+}
+
+/* ---- Beneficios ---- */
+.beneficios {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.beneficios h2 {
+  color: #db5aa7;
+  margin-bottom: 40px;
+}
+
+.beneficios-grid {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.beneficio img {
+  width: 60px;
+  margin-bottom: 10px;
+}
+
+.beneficio p {
+  font-weight: 500;
+}
+
+/* ---- Productos ---- */
+.productos {
+  padding: 60px 20px;
+  background-color: #fef0f6;
+  text-align: center;
+}
+
+.productos h2 {
+  margin-bottom: 40px;
+  color: #db5aa7;
+}
+
+.productos-grid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.producto {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  width: 250px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.producto img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.producto h3 {
+  margin: 10px 0;
+  color: #db5aa7;
+}
+
+/* ---- Testimonios ---- */
+.testimonios {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.testimonios h2 {
+  color: #db5aa7;
+  margin-bottom: 30px;
+}
+
+.testimonios-grid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.testimonio {
+  background-color: #ffe6f0;
+  padding: 20px;
+  border-radius: 10px;
+  width: 280px;
+}
+
+/* ---- Formulario ---- */
+.contacto {
+  padding: 60px 20px;
+  background-color: #fef0f6;
+  text-align: center;
+}
+
+.contacto h2 {
+  color: #db5aa7;
+  margin-bottom: 30px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+input, textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-family: inherit;
+}
+
+button {
+  background-color: #db5aa7;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: #c94f9c;
+}
+
+/* ---- Footer ---- */
+footer {
+  background-color: #ffe6f0;
+  padding: 20px;
+  text-align: center;
+  color: #555;
+  font-size: 14px;
+}
+
+/* ---- Responsive ---- */
+@media screen and (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .beneficios-grid,
+  .productos-grid,
+  .testimonios-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .producto,
+  .testimonio {
+    width: 90%;
+  }
+
+  form {
+    width: 90%;
+  }
+}
+.staatliches-regular {
+  
+  font-weight: 400;
+  font-style: normal;
+}
+

@@ -1,0 +1,316 @@
+/* Reset y fuente base */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(255, 255, 255);
+  font-family: 'Karla', sans-serif;
+}
+
+/* Encabezado */
+header {
+  background-color: black;
+  text-align: center;
+  padding: 10px 20px;
+}
+
+#logo {
+  width: 150px;
+  height: auto;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+/* Menú de navegación */
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.menu #bravet {
+  color: rgb(255, 23, 54);
+}
+
+.menu a:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.menu-item {
+  position: relative;
+  display: inline-block;
+}
+
+.subojos {
+  display: none;
+  position: absolute;
+  top: 100%;
+  background-color: black;
+  padding: 10px 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  z-index: 100;
+  width: 30vw;
+  text-align: left;
+}
+
+.subojos a {
+  display: block;
+  color: white;
+  padding: 5px 0;
+  font-size: 13px;
+  text-decoration: none;
+}
+
+.subojos a:hover {
+  text-decoration: underline;
+}
+
+.menu-item:hover .subojos {
+  display: block;
+}
+
+/* Título */
+#comprartodo {
+  font-size: 14px;
+  font-weight: normal;
+  color: #333;
+  margin-top: 30px;
+  margin-left: 70px;
+}
+
+/* Banner */
+#banner {
+  display: block;
+  margin: 30px auto;
+  max-width: 90%;
+  height: auto;
+}
+
+/* Galería de productos */
+.galeria-productos {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  padding: 40px 60px;
+  justify-items: center;
+}
+
+/* Tarjeta de producto */
+.producto {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  padding: 15px;
+  text-align: center;
+  width: 100%;
+  max-width: 250px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.producto:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+}
+
+.producto img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+/* Botón de detalles */
+.ver-detalle {
+  margin-top: 10px;
+  padding: 10px 16px;
+  background-color: black;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+.ver-detalle:hover {
+  background-color: #ff1744;
+}
+
+/* Texto de detalle oculto */
+.detalle {
+  font-size: 13px;
+  margin-top: 12px;
+  color: #444;
+  display: none;
+}
+
+/* Responsive */
+@media screen and (max-width: 1100px) {
+  .galeria-productos {
+    grid-template-columns: repeat(3, 1fr);
+    padding: 30px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .galeria-productos {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 20px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .galeria-productos {
+    grid-template-columns: 1fr;
+    padding: 15px;
+  }
+}
+.barra-filtros {
+  background-color: #ffffff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  padding: 20px 60px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.fila-filtros,
+.fila-orden {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  justify-content: space-between;
+}
+
+.fila-filtros {
+  justify-content: flex-start;
+}
+
+.orden {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.etiqueta {
+  font-weight: bold;
+  color: #000000;
+  font-size: 14px;
+}
+
+.barra-filtros select {
+  padding: 8px 14px;
+  border: 2px solid black;
+  border-radius: 0;
+  font-size: 14px;
+  background-color: white;
+  color: black;
+  cursor: pointer;
+  font-family: "Karla", sans-serif;
+  font-weight: bold;
+  appearance: none;
+  background-image: url('data:image/svg+xml;utf8,<svg fill="black" height="16" viewBox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 12px;
+  padding-right: 35px;
+}
+
+
+.contador {
+  font-size: 13px;
+  color: #666;
+  font-style: italic;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .fila-filtros,
+  .fila-orden {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .barra-filtros {
+    padding: 20px;
+  }
+}
+
+footer {
+  background-color: #000;
+  color: white;
+  padding: 40px 60px;
+  font-family: "Karla", sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+/* Nivel 1: links informativos */
+.footer-nivel1 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 30px;
+}
+
+.footer-nivel1 a {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.footer-nivel1 a:hover {
+  text-decoration: underline;
+  color: #ff1744;
+}
+
+/* Nivel 2: links legales */
+.footer-nivel2 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 30px;
+}
+
+.footer-nivel2 a {
+  color: #ccc;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.footer-nivel2 a:hover {
+  text-decoration: underline;
+  color: #ff1744;
+}
+
+/* Nivel 3: texto informativo */
+.footer-nivel3 {
+  font-size: 10px;
+  color: #888;
+  line-height: 1.5;
+  max-width: 900px;
+}
+#descripcion-ojos {
+  font-size: 16px;
+  font-weight: 400;
+  color: #000000;
+  font-family: "Karla", sans-serif;
+  margin: 10px 70px 30px 70px;
+  line-height: 1.6;
+  text-align: center;
+}
